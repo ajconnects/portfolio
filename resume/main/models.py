@@ -37,6 +37,7 @@ class ContactProfile(models.Model):
     timestamp = models.DateTimeField(auto_now_add=True)
     name = models.CharField(max_length=200, verbose_name='Name')
     email = models.EmailField(verbose_name="Email")
+    phone = models.SmallIntegerField(verbose_name="Phone Number", null=True)
     message = models.TextField(verbose_name="Message")
 
     class Meta:

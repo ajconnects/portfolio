@@ -5,12 +5,17 @@ from .models import ContactProfile
 class ContactForm(forms.ModelForm):
 
     name = forms.CharField(max_length=200, required=True,widget=forms.TextInput(attrs={
-        'placeholder': '*Full name..',
+        'placeholder': '*Full Name..',
         #'class': 'form-control'
     }))
 
     email = forms.EmailField(max_length=254, required=True,widget=forms.TextInput(attrs={
         'placeholder': '*Email..',
+        #'class': 'form-control'
+    }))
+
+    phone = forms.CharField(max_length=50, required=True,widget=forms.TextInput(attrs={
+        'placeholder': '*Contact Number..',
         #'class': 'form-control'
     }))
 
