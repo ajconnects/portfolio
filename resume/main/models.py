@@ -90,6 +90,7 @@ class Portfolio(models.Model):
     image = models.ImageField(blank=True, null=True, upload_to='portfolio')
     slug = models.SlugField(null=True, blank=True)
     is_active = models.BooleanField(default=True)
+    link = models.URLField(default=True, max_length=300, null=True)
 
     class Meta:
         verbose_name_plural = 'Portfolio Profiles'

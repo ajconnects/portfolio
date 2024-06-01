@@ -180,6 +180,11 @@ Start Content
                 <h4 class="lgTitle"><a href="{% url 'main:portfolio' slug=p.slug %}">{{p.name}}</a></h4>
                 <ul class="portfolioOption">
                   <li><span class="dateLbl">{{p.date.year}}</span></li>
+                  {% if p.link %}
+                    <li><a href="{{p.link}}" class="dateLbl" target="_blank">View Code</a></li>
+                    {% else %}
+                    <li><span class="dateLbl">No</span></li>
+                    {% endif %}
                 </ul>
                 <p>{{p.description}}</p>
               </div>
